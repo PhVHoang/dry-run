@@ -1,0 +1,2 @@
+class DruRunFunctionNotDefined(Exception):
+    pass
