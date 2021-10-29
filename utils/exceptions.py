@@ -1,2 +1,2 @@
-class DruRunFunctionNotDefined(Exception):
+class DryRunFunctionNotDefined(Exception):
     pass
