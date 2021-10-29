@@ -4,7 +4,7 @@ import inspect
 
 from utils import logger
 from utils.constants import DRY_RUN_FUNCTION_KWARGS
-from utils.exceptions import DruRunFunctionNotDefined
+from utils.exceptions import DryRunFunctionNotDefined
 
 _LOGGER = logger.log("dry_run")
 
@@ -59,7 +59,7 @@ class DryRun:
                     _LOGGER.logger.error(
                         f'Missing argument: dry_run_function on {func.__qualname__}'
                     )
-                    raise DruRunFunctionNotDefined('Missing argument: dry_run_function')
+                    raise DryRunFunctionNotDefined('Missing argument: dry_run_function')
                 return func_kwargs.get(DRY_RUN_FUNCTION_KWARGS)(*args, **kwargs)
             return func(*args, **kwargs)
         return wrapper
